@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Support Scenarios Trainer</title>
+    <title>IT Support Scenarios Reference</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -49,36 +49,6 @@
             columns: 2;
             column-gap: 20px;
         }
-        .interactive-section {
-            background-color: #e8f8f5;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 15px;
-        }
-        button {
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-right: 10px;
-            margin-bottom: 10px;
-        }
-        button:hover {
-            background-color: #2980b9;
-        }
-        textarea {
-            width: 100%;
-            padding: 10px;
-            border-radius: 4px;
-            border: 1px solid #ddd;
-            min-height: 80px;
-            margin-bottom: 10px;
-        }
-        .hidden {
-            display: none;
-        }
         .tab-buttons {
             display: flex;
             margin-bottom: 20px;
@@ -97,14 +67,14 @@
     </style>
 </head>
 <body>
-    <h1>IT Support Scenarios Trainer</h1>
+    <h1>IT Support Scenarios Reference</h1>
     
     <div class="tab-buttons">
         <div class="tab-button active" onclick="showScenario(1)">Ticket Follow-up</div>
         <div class="tab-button" onclick="showScenario(2)">Remote Support</div>
         <div class="tab-button" onclick="showScenario(3)">Escalation</div>
         <div class="tab-button" onclick="showScenario(4)">Incident Response</div>
-        <div class="tab-button" onclick="showScenario(5)">Phrases Practice</div>
+        <div class="tab-button" onclick="showScenario(5)">Key Phrases</div>
     </div>
     
     <!-- Scenario 1: Ticket Follow-up -->
@@ -114,30 +84,9 @@
         <div class="conversation">
             <p><span class="user">You:</span> Hi Emma, this is Alex from IT support. I'm following up on your ticket about the printer issue.</p>
             <p><span class="support">Emma:</span> Oh, hi. Yes, the printer keeps showing "Paper Jam" even though I've checked it.</p>
-            
-            <div class="interactive-section">
-                <p>How would you respond?</p>
-                <textarea id="response-1" placeholder="Type your response here..."></textarea>
-                <button onclick="checkResponse(1)">Submit</button>
-                <button onclick="showAnswer(1)">Show Answer</button>
-                <div id="feedback-1" class="hidden"></div>
-                <div id="answer-1" class="hidden">
-                    <p><span class="support">Suggested Response:</span> Got it. Could you try turning the printer off, unplugging it for 30 seconds, and then plugging it back in?</p>
-                </div>
-            </div>
-            
+            <p><span class="user">You:</span> Got it. Could you try turning the printer off, unplugging it for 30 seconds, and then plugging it back in?</p>
             <p><span class="support">Emma:</span> Just tried it... it works now.</p>
-            
-            <div class="interactive-section">
-                <p>How would you conclude the call?</p>
-                <textarea id="response-1b" placeholder="Type your response here..."></textarea>
-                <button onclick="checkResponse('1b')">Submit</button>
-                <button onclick="showAnswer('1b')">Show Answer</button>
-                <div id="feedback-1b" class="hidden"></div>
-                <div id="answer-1b" class="hidden">
-                    <p><span class="support">Suggested Response:</span> Great. I'll go ahead and close the ticket, but if the issue comes back, just ping me.</p>
-                </div>
-            </div>
+            <p><span class="user">You:</span> Great. I'll go ahead and close the ticket, but if the issue comes back, just ping me.</p>
         </div>
         
         <div class="phrases">
@@ -159,30 +108,9 @@
         <div class="conversation">
             <p><span class="user">You:</span> Hi David, I saw your request about the software not launching. Can I remote into your PC to check?</p>
             <p><span class="support">David:</span> Sure, go ahead.</p>
-            
-            <div class="interactive-section">
-                <p>After connecting, you see a pending update. What would you say?</p>
-                <textarea id="response-2" placeholder="Type your response here..."></textarea>
-                <button onclick="checkResponse(2)">Submit</button>
-                <button onclick="showAnswer(2)">Show Answer</button>
-                <div id="feedback-2" class="hidden"></div>
-                <div id="answer-2" class="hidden">
-                    <p><span class="support">Suggested Response:</span> Thanks. I'm in now. I can see there's a pending update. Let's install that and restart.</p>
-                </div>
-            </div>
-            
+            <p><span class="user">You:</span> Thanks. I'm in now. I can see there's a pending update. Let's install that and restart.</p>
             <p><span class="support">David:</span> Okay... oh, it's working now.</p>
-            
-            <div class="interactive-section">
-                <p>How would you document this?</p>
-                <textarea id="response-2b" placeholder="Type your response here..."></textarea>
-                <button onclick="checkResponse('2b')">Submit</button>
-                <button onclick="showAnswer('2b')">Show Answer</button>
-                <div id="feedback-2b" class="hidden"></div>
-                <div id="answer-2b" class="hidden">
-                    <p><span class="support">Suggested Response:</span> Perfect. I'll note in the ticket that it was caused by a missing update.</p>
-                </div>
-            </div>
+            <p><span class="user">You:</span> Perfect. I'll note in the ticket that it was caused by a missing update.</p>
         </div>
         
         <div class="phrases">
@@ -204,17 +132,7 @@
         <div class="conversation">
             <p><span class="user">You:</span> Hi Chris, I've tried all the basic troubleshooting for your database access issue, but it's still failing. I'll escalate this to our Tier 2 team.</p>
             <p><span class="support">Chris:</span> Okay, please keep me posted.</p>
-            
-            <div class="interactive-section">
-                <p>How would you respond?</p>
-                <textarea id="response-3" placeholder="Type your response here..."></textarea>
-                <button onclick="checkResponse(3)">Submit</button>
-                <button onclick="showAnswer(3)">Show Answer</button>
-                <div id="feedback-3" class="hidden"></div>
-                <div id="answer-3" class="hidden">
-                    <p><span class="support">Suggested Response:</span> Will do. You'll get an update once Tier 2 investigates.</p>
-                </div>
-            </div>
+            <p><span class="user">You:</span> Will do. You'll get an update once Tier 2 investigates.</p>
         </div>
         
         <div class="phrases">
@@ -236,30 +154,9 @@
         <div class="conversation">
             <p><span class="user">You:</span> Hi team, this is Alex. We've just been alerted about a potential phishing email that went to several employees.</p>
             <p><span class="support">Manager:</span> What's the plan?</p>
-            
-            <div class="interactive-section">
-                <p>What would you propose?</p>
-                <textarea id="response-4" placeholder="Type your response here..."></textarea>
-                <button onclick="checkResponse(4)">Submit</button>
-                <button onclick="showAnswer(4)">Show Answer</button>
-                <div id="feedback-4" class="hidden"></div>
-                <div id="answer-4" class="hidden">
-                    <p><span class="support">Suggested Response:</span> I'll block the sender at the mail gateway and send an advisory email to all staff right away.</p>
-                </div>
-            </div>
-            
+            <p><span class="user">You:</span> I'll block the sender at the mail gateway and send an advisory email to all staff right away.</p>
             <p><span class="support">Manager:</span> Good. Keep security in the loop.</p>
-            
-            <div class="interactive-section">
-                <p>How would you acknowledge this?</p>
-                <textarea id="response-4b" placeholder="Type your response here..."></textarea>
-                <button onclick="checkResponse('4b')">Submit</button>
-                <button onclick="showAnswer('4b')">Show Answer</button>
-                <div id="feedback-4b" class="hidden"></div>
-                <div id="answer-4b" class="hidden">
-                    <p><span class="support">Suggested Response:</span> Understood. I'll coordinate with the security team throughout.</p>
-                </div>
-            </div>
+            <p><span class="user">You:</span> Understood. I'll coordinate with the security team throughout.</p>
         </div>
         
         <div class="phrases">
@@ -274,52 +171,24 @@
         </div>
     </div>
     
-    <!-- Scenario 5: Phrases Practice -->
+    <!-- Scenario 5: Phrases Reference -->
     <div id="scenario-5" class="scenario-container hidden">
-        <h2 class="scenario-title">Phrases Practice</h2>
+        <h2 class="scenario-title">IT Support Key Phrases</h2>
         
-        <div class="interactive-section">
-            <h3>Match the IT Support phrase to its meaning:</h3>
-            
-            <div style="margin-bottom: 20px;">
-                <p><strong>1. "ping me"</strong></p>
-                <button onclick="checkPhrase(1,1)">Contact me</button>
-                <button onclick="checkPhrase(1,2)">Send me an email</button>
-                <button onclick="checkPhrase(1,3)">Call me immediately</button>
-                <div id="phrase-feedback-1" class="hidden"></div>
-            </div>
-            
-            <div style="margin-bottom: 20px;">
-                <p><strong>2. "escalate to Tier 2"</strong></p>
-                <button onclick="checkPhrase(2,1)">Send to higher level support</button>
-                <button onclick="checkPhrase(2,2)">Close the ticket</button>
-                <button onclick="checkPhrase(2,3)">Ask the user to fix it</button>
-                <div id="phrase-feedback-2" class="hidden"></div>
-            </div>
-            
-            <div style="margin-bottom: 20px;">
-                <p><strong>3. "pending update"</strong></p>
-                <button onclick="checkPhrase(3,1)">An available but not installed update</button>
-                <button onclick="checkPhrase(3,2)">A failed update</button>
-                <button onclick="checkPhrase(3,3)">An optional feature</button>
-                <div id="phrase-feedback-3" class="hidden"></div>
-            </div>
-            
-            <div style="margin-bottom: 20px;">
-                <p><strong>4. "advisory email"</strong></p>
-                <button onclick="checkPhrase(4,1)">A warning message to staff</button>
-                <button onclick="checkPhrase(4,2)">A meeting invitation</button>
-                <button onclick="checkPhrase(4,3)">A newsletter</button>
-                <div id="phrase-feedback-4" class="hidden"></div>
-            </div>
-            
-            <div style="margin-bottom: 20px;">
-                <p><strong>5. "note in the ticket"</strong></p>
-                <button onclick="checkPhrase(5,1)">Document the solution</button>
-                <button onclick="checkPhrase(5,2)">Assign the ticket</button>
-                <button onclick="checkPhrase(5,3)">Close the ticket</button>
-                <div id="phrase-feedback-5" class="hidden"></div>
-            </div>
+        <div class="phrases">
+            <h3>Common IT Support Phrases and Meanings:</h3>
+            <ul class="phrase-list">
+                <li><strong>"ping me"</strong> - Contact me</li>
+                <li><strong>"pending update"</strong> - An available but not installed update</li>
+                <li><strong>"note in the ticket"</strong> - Document the solution in the tracking system</li>
+                <li><strong>"escalate to Tier 2"</strong> - Send to higher level support team</li>
+                <li><strong>"keep me posted"</strong> - Keep me updated on progress</li>
+                <li><strong>"incident response"</strong> - Process for handling security issues</li>
+                <li><strong>"block the sender"</strong> - Prevent emails from this address</li>
+                <li><strong>"advisory email"</strong> - Warning message to staff about an issue</li>
+                <li><strong>"remote into your PC"</strong> - Connect to your computer remotely</li>
+                <li><strong>"close the ticket"</strong> - Mark the issue as resolved in tracking system</li>
+            </ul>
         </div>
     </div>
 
@@ -342,74 +211,6 @@
                     btn.classList.remove('active');
                 }
             });
-        }
-        
-        // Check user's response against expected answer
-        function checkResponse(id) {
-            const response = document.getElementById('response-' + id).value.toLowerCase();
-            const feedback = document.getElementById('feedback-' + id);
-            feedback.classList.remove('hidden');
-            
-            // Simple keyword checking (in a real app this would be more sophisticated)
-            let keywords = [];
-            let suggestion = "";
-            
-            if (id === '1') {
-                keywords = ['off', 'unplug', '30', 'seconds', 'plug'];
-                suggestion = "Try suggesting a power cycle (turning off and unplugging the printer).";
-            } else if (id === '1b') {
-                keywords = ['close', 'ticket', 'ping', 'contact'];
-                suggestion = "Mention closing the ticket but keeping communication open.";
-            } else if (id === '2') {
-                keywords = ['pending', 'update', 'install', 'restart'];
-                suggestion = "Mention the pending update and suggest installing it.";
-            } else if (id === '2b') {
-                keywords = ['note', 'ticket', 'missing', 'update'];
-                suggestion = "Mention documenting the cause in the ticket.";
-            } else if (id === '3') {
-                keywords = ['update', 'investigate', 'will do'];
-                suggestion = "Acknowledge you'll provide updates after investigation.";
-            } else if (id === '4') {
-                keywords = ['block', 'sender', 'advisory', 'email'];
-                suggestion = "Suggest blocking the sender and notifying staff.";
-            } else if (id === '4b') {
-                keywords = ['security', 'team', 'coordinate', 'understood'];
-                suggestion = "Acknowledge the security team's involvement.";
-            }
-            
-            const matches = keywords.filter(word => response.includes(word));
-            
-            if (matches.length >= 3) {
-                feedback.innerHTML = "<span style='color:green'>Good job! You included key elements of an appropriate response.</span>";
-            } else {
-                feedback.innerHTML = `<span style='color:orange'>Almost there. ${suggestion}</span>`;
-            }
-        }
-        
-        // Show the suggested answer
-        function showAnswer(id) {
-            document.getElementById('answer-' + id).classList.remove('hidden');
-        }
-        
-        // Check phrase matching answers
-        function checkPhrase(question, answer) {
-            const feedback = document.getElementById('phrase-feedback-' + question);
-            feedback.classList.remove('hidden');
-            
-            // Correct answers
-            const correct = {
-                1: 1,
-                2: 1,
-                3: 1,
-                4: 1,
-                5: 1
-            };
-            
-            if (answer === correct[question]) {
-                feedback.innerHTML = "<span style='color:green'>Correct! Well done.</span>";
-            } else {
-                feedback.innerHTML = "<span style='color:red'>Not quite. Try again.</span>";
-            }
         }
         
         // Initialize by showing first scenario
